@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    /* border: 1px solid black; */
+
+    background-color: hsl(60, 11%, 96%);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: hsl(0, 0%, 18%);
+}
+
+h1, h2{
+    color:hsl(0, 0%, 17%);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2em;
+    text-align: center;
+}
+
+p{
+    padding: 1rem;
+}
+
+header > img{
+    height: 14rem;
+    width: 7rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+nav{
+    margin-top: 1rem;
+    background-color: hsl(167, 53%, 35%);
+    padding: .5rem 0;
+    border-radius: 1rem;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    gap: .5rem;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    min-width: 8rem;
+    text-align: center;
+    padding: .55rem 1rem;
+    color: hsl(60, 9%, 96%);
+    background: transparent;
+    border: .14rem solid hsla(0, 0%, 100%, .55);
+    border-radius: .9rem;
+    text-decoration: none;
+    transition: background-color .15s ease,
+            border-color .15s ease,
+            color .15s ease;
+}
+nav a:hover{
+    background: hsl(18, 51%, 47%);
+    border-color: hsla(0,0%,100%,.8);
+    color: hsl(0, 0%, 18%);  
+}
+
+nav a:focus-visible{
+    outline: .2rem solid  hsl(60, 9%, 96%); 
+    outline-offset: 2px;
+}
+
+
+/************           Main           ************/
+main { 
+    max-width: 72rem; 
+    margin-inline: auto; }
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+
+section > article{
+    flex: 1 1 16rem;
+    background-color: hsl(120, 8%, 88%);
+    margin: .25rem;
+    padding: 1rem;
+    border-radius: .9rem;
+    
+}
+
+/************           Promos           ************/
+@media (max-width: 800px) {
+  main > section:first-of-type article {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+main > section:first-of-type article{
+     background: 
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), /* overlay */
+    url("../img/promosbackground.png") center/cover no-repeat;
+  padding: 2rem;
+}
+
+
+main > section:first-of-type b{
+    color: hsl(10, 50%, 45%);
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid hsl(10, 50%, 45%);
+    padding-bottom: 1px;
+    font-variant: small-caps;
+    transition: color .2s ease, border-color .2s ease;
+}
+
+main > section:first-of-type b:hover{
+    color: hsl(18, 51%, 47%);
+    border-color: hsl(18, 51%, 47%);
+}
+
+main > section:first-of-type article{
+    display: flex;
+    gap: 1rem;           
+    align-items: center; 
+    font-size: 1.05em;
+    
+}
+
+main > section:first-of-type article h1{
+    flex: 3;
+}
+
+
+main > section:first-of-type article p{
+    flex: 2;
+    min-height: 6em;
+    background-color: hsl(120, 8%, 88%);
+    border: 1px solid hsl(120, 8%, 100%);
+    border-radius: .9rem;
+    text-align: center;
+    padding: 1em;
+}
+
+article > img:first-of-type{
+    height: 6rem;
+    width: auto;
+}
+
+/************           Info Atricles           ************/
+section:nth-of-type(2) img{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8))
+}
+
+section:nth-of-type(2) h2{
+    min-height: 6rem;
+}
+
+/************           Footer           ************/
+footer {
+    display: flex;
+    justify-content: center ;
+    margin-top: 1rem;
+    background-color: hsl(167, 53%, 35%);
+    padding: .5rem 0;
+    border-radius: 1rem;
+}
+
+footer > div {
+    display: flex;
+    align-items: center;
+
+}
+
+footer > div > img{
+    height: 6rem;
+    width: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+footer > div > p {
+    font-size: .7rem;
+}
